@@ -1,0 +1,12 @@
+// varriables
+$content_width: 1100px;
+$footer_height: 125px;
+
+// layout
+@import "_misc/font";
+@import "_misc/mixins";
+@import "_misc/normalize";
+@import "_misc/adjustments";
+
+// sections
+@import "sections/header";

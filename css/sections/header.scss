@@ -1,0 +1,261 @@
+.header__bg {
+	background-color: #c22e33;
+	/* IE9, iOS 3.2+ */
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIyMCUiIGN5PSI4MCUiIHI9IjExMy4xMzcwODQ5ODk4NDc2MSUiPjxzdG9wIHN0b3AtY29sb3I9IiNlNDQzNDciIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2JjMjYyYyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhYjI4MmUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+	/* Android 2.3- hack (needed for the actual radial gradient) */
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIyMCUiIGN5PSI4MCUiIHI9IjExMy4xMzcwODQ5ODk4NDc2MSUiPjxzdG9wIHN0b3AtY29sb3I9IiNlNDQzNDciIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2JjMjYyYyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhYjI4MmUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+),
+	-webkit-gradient(radial, 20% 80%, 0, 20% 80%, 2268,color-stop(0, rgb(228, 67, 71)),color-stop(0.5, rgb(188, 38, 44)),color-stop(1, rgb(171, 40, 46)));
+	/* Android 2.3 */
+	background-image: -webkit-radial-gradient(20% 80%, circle farthest-corner,rgb(228, 67, 71) 0%,rgb(188, 38, 44) 50%,rgb(171, 40, 46) 100%);
+	/* IE10+ */
+	background-image: radial-gradient(circle farthest-corner at 20% 80%,rgb(228, 67, 71) 0%,rgb(188, 38, 44) 50%,rgb(171, 40, 46) 100%);
+	background-image: -ms-radial-gradient(20% 80%, circle farthest-corner,rgb(228, 67, 71) 0%,rgb(188, 38, 44) 50%,rgb(171, 40, 46) 100%);
+}
+
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+	.header__bg {
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe44347",endColorstr="#ffab282e",GradientType=0);
+	}
+}
+
+
+.header {
+	padding-top: 25px;
+	padding-bottom: 60px;
+}
+
+/* ==================== HEADER TOP ==================== */
+
+.header__top {
+	@extend %clearfix;
+	margin-bottom: 70px;
+}
+
+.header__title {
+	float: left;
+	font-size: 0;
+}
+
+.header__nav {
+	float: right;
+	padding-top: 14px;
+	font-size: 0;
+}
+
+.header__logo {
+	@include inline-block(middle);
+	margin-left: 22px;
+	overflow: hidden;
+	width: 81px;
+	height: 66px;
+}
+
+.header__logo_img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.header__text {
+	@include inline-block(middle);
+	font: 36px/36px 'MalinaRegular';
+	padding-left: 19px;
+	color: #fca211;
+}
+
+.nav__menu {
+	@include inline-block(middle);
+	padding-right: 24px;
+}
+
+.menu__item {
+	@include inline-block(middle);
+	padding: 0 30px;
+}
+
+.menu_link {
+	display: block;
+	font: 16px 'ArialRegular';
+	letter-spacing: 1.3px;
+	color: #fff;
+}
+
+.angle-down {
+	&:after {
+		position: absolute;
+		content: '\f107';
+		font: 12px 'FontAwesome';
+		padding: 5px 0 0 10px;
+	}
+}
+
+.nav__icons {
+	@include inline-block(middle);
+}
+
+.nav__icon {
+	width: 42px;
+	height: 42px;
+	margin: 0 15px 0 9px;
+	overflow: hidden;
+	@include inline-block(middle);
+	@include border-radius(50%);
+	background: rgba(#fff, 0.1);
+}
+
+.nav__icon_cabinet {
+	display: block;
+	height: 100%;
+	background: url('../img/icons/cabinet.png') center no-repeat;
+}
+
+.nav__icon_search {
+	display: block;
+	height: 100%;
+	background: url('../img/icons/search.png') center no-repeat;
+}
+
+/* ==================== HEADER MIDDLE ==================== */
+
+.header__middle {
+	@extend %clearfix;
+	margin-bottom: 56px;
+}
+
+.hipsweet__info-add {
+	width: 140px;
+	float: left;
+}
+
+.hipsweet__ingredients {
+	padding-top: 84px;
+	padding-right: 10px;
+	margin-bottom: 21px;
+	text-align: center;
+}
+
+.ingredients__img {
+	width: 42px;
+	height: 42px;
+	overflow: hidden;
+	margin: 0 auto 15px;
+	@include border-radius(50%);
+	background: url('../img/icons/mixer.png') center no-repeat, rgba(#fff, 0.1);
+}
+
+.ingredients__text {
+	font: 15px 'ArialRegular';
+	color: #fff;
+}
+
+.hipsweet__background {
+	margin-bottom: 28px;
+	padding-left: 26px;
+	font: 150px/150px 'MalinaRegular';
+	color: rgba(#fff, 0.22);
+}
+
+.hipsweet__storage-life {
+	text-align: center;
+}
+
+.storage-life__text {
+	font: 13px/13px 'ArialRegular';
+	letter-spacing: 1.3px;
+	color: rgba(#fff, 0.28);
+}
+
+.storage-life__value {
+	font: 24px/24px 'MalinaRegular';
+	color: #fff;
+}
+
+.hipsweet__pic{
+	position: relative;
+	float: left;
+	margin-left: 43px;
+	overflow: hidden;
+	width: 436px;
+	height: 475px;
+}
+
+.hipsweet__pic_img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.hipsweet__pic_shadow {
+	position: absolute;
+	right: 0;
+	bottom: -40px;
+	display: block;
+	opacity: 0.22;
+	width: 458px;
+	height: 64px;
+}
+
+.hipsweet__info {
+	float: left;
+	margin-left: 73px;
+	width: 408px;
+}
+
+.hipsweet__title {
+	font: 62px/74px 'MalinaRegular';
+	padding-top: 35px;
+	margin-bottom: 24px;
+	color: #fff;
+}
+
+.hipsweet__desc {
+	font: 15px/21px 'ArialRegular';
+	margin: 0 0 33px;
+	color: #fff;
+}
+
+.hipsweet__order {
+	font-size: 0;
+}
+
+.hipsweet__price {
+	@include inline-block(middle);
+	font: 62px/62px 'MalinaRegular';
+	color: #fff;
+}
+
+.hipsweet__btn {
+	@include inline-block(middle);
+	@include border-radius(20px);
+	margin-left: 46px;
+	background: #fca211;
+	padding: 14px 23px;
+	font: 14px/14px 'ArialBold';
+	color: #a4151c;
+	@include transition(all .3s);
+	&:hover {
+		background: #641a00;
+		color: #fca211;
+	}
+}
+
+/* ==================== HEADER BOTTOM ==================== */
+
+.header__bottom {
+
+}
+
+.nav__slider {
+	text-align: center;
+	font-size: 0;
+}
+
+.slider__item {
+	@include inline-block();
+	@include border-radius(50%);
+	width: 8px;
+	height: 8px;
+	margin: 0 16px;
+	background: #fff;
+}
