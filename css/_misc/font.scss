@@ -20,7 +20,14 @@
 	url('../fonts/arialbold-webfont.svg#arialbold') format('svg');
 	font-weight: normal;
 	font-style: normal;
+}
 
+@font-face {
+	font-family: 'HelveticaRegular';
+	src: url('../fonts/helveticaregular-webfont.woff') format('woff'),
+	url('../fonts/helveticaregular-webfont.svg#helveticaregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {

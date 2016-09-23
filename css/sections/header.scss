@@ -43,6 +43,7 @@
 	font-size: 0;
 }
 
+/* ---------- nav logo ---------- */
 .header__logo {
 	@include inline-block(middle);
 	margin-left: 22px;
@@ -64,6 +65,7 @@
 	color: #fca211;
 }
 
+/* ---------- nav menu ---------- */
 .nav__menu {
 	@include inline-block(middle);
 	padding-right: 24px;
@@ -71,25 +73,106 @@
 
 .menu__item {
 	@include inline-block(middle);
-	padding: 0 30px;
+	margin: 0 30px;
 }
 
 .menu_link {
 	display: block;
-	font: 16px 'ArialRegular';
+	font: 16px/16px 'ArialRegular';
 	letter-spacing: 1.3px;
 	color: #fff;
+	@include transition(color .3s);
 }
 
-.angle-down {
-	&:after {
-		position: absolute;
-		content: '\f107';
-		font: 12px 'FontAwesome';
-		padding: 5px 0 0 10px;
+.angle-down-up:after {
+	position: absolute;
+	content: '\f107';
+	font: 12px 'FontAwesome';
+	padding: 4px 0 0 10px;
+}
+
+/* ---------- team dropdown ---------- */
+.team {
+	position: relative;
+	&:hover {
+		.menu_link {
+			color: #ffaf28;
+		}
+		.angle-down-up:after {
+			content: '\f106';
+		}
+		.team__dropdown{
+			left: -75px;
+			opacity: 1;
+		}
+		.team__triangle {
+			left: 19px;
+			opacity: 1;
+		}
 	}
 }
 
+.team__dropdown {
+	display: block;
+	position: absolute;
+	left: -9999px;
+	top: 50px;
+	min-width: 227px;
+	box-sizing: border-box;
+	padding: 28px 45px 22px;
+	@include border-radius(20px);
+	background: rgba(#fff, 0.92);
+	z-index: 1;
+	opacity: 0;
+	@include transition(opacity .3s);
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -40px;
+		height: 40px;
+	}
+}
+
+.team__item {
+	font: 16px/40px 'HelveticaRegular';
+	color: #575757;
+	white-space: nowrap;
+}
+
+.team__item_active {
+	font-weight: bolder;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 8px solid #ffaf28;
+		border-top: 9px solid transparent;
+		border-bottom: 9px solid transparent;
+		margin-top: 12px;
+		margin-left: -45px;
+	}
+}
+
+.team__triangle {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-bottom: 13px solid rgba(#fff, 0.92);
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	top: 37px;
+	left: -9999px;
+	z-index: 1;
+	opacity: 0;
+	@include transition(opacity .3s);
+}
+
+/* ---------- nav icons ---------- */
 .nav__icons {
 	@include inline-block(middle);
 }
@@ -136,13 +219,67 @@
 }
 
 .ingredients__img {
+	position: relative;
 	width: 42px;
 	height: 42px;
-	overflow: hidden;
+	//overflow: hidden;
 	margin: 0 auto 15px;
 	@include border-radius(50%);
 	background: url('../img/icons/mixer.png') center no-repeat, rgba(#fff, 0.1);
 }
+
+/* ---------- ingredients dropdown ---------- */
+.ingredients__dropdown {
+	display: block;
+	position: absolute;
+	//left: -9999px;
+	left: 94px;
+	top: -69px;
+	min-width: 380px;
+	min-height: 245px;
+	box-sizing: border-box;
+	padding: 24px 30px;
+	@include border-radius(20px);
+	background: rgba(#fff, 0.92);
+	z-index: 1;
+	//opacity: 0;
+	@include transition(opacity .3s);
+	&:before {
+
+
+
+	}
+}
+
+.ingredients__item {
+	text-align: left;
+	font-size: 0;
+}
+
+.ingredient__pic {
+	@include inline-block(middle);
+	width: 26px;
+}
+
+.ingredient__name {
+	@include inline-block(middle);
+	padding-left: 12px;
+	min-width: 195px;
+	font: 16px/40px 'HelveticaRegular';
+	color: #575757;
+	//text-align: left;
+}
+
+.ingredient__value {
+	@include inline-block(middle);
+	padding-left: 12px;
+	font: 16px/40px 'HelveticaRegular';
+	color: #575757;
+	//text-align: left;
+}
+
+
+
 
 .ingredients__text {
 	font: 15px 'ArialRegular';
