@@ -12,14 +12,6 @@
 	background-image: -ms-radial-gradient(20% 80%, circle farthest-corner,rgb(228, 67, 71) 0%,rgb(188, 38, 44) 50%,rgb(171, 40, 46) 100%);
 }
 
-/* IE8- CSS hack */
-@media \0screen\,screen\9 {
-	.header__bg {
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe44347",endColorstr="#ffab282e",GradientType=0);
-	}
-}
-
-
 .header {
 	padding-top: 25px;
 	padding-bottom: 60px;
@@ -102,11 +94,11 @@
 			content: '\f106';
 		}
 		.team__dropdown{
-			left: -75px;
+			left: -74px;
 			opacity: 1;
 		}
 		.team__triangle {
-			left: 19px;
+			left: 20px;
 			opacity: 1;
 		}
 	}
@@ -218,36 +210,50 @@
 	text-align: center;
 }
 
+/* ---------- ingredients dropdown ---------- */
 .ingredients__img {
 	position: relative;
 	width: 42px;
 	height: 42px;
-	//overflow: hidden;
 	margin: 0 auto 15px;
 	@include border-radius(50%);
 	background: url('../img/icons/mixer.png') center no-repeat, rgba(#fff, 0.1);
+	@include transition(background-color .3s);
+	&:hover {
+		background-color: rgba(#ffaf28, 0.92);
+		.ingredients__dropdown {
+			left: 94px;
+			opacity: 1;
+		}
+		.ingredients__triangle {
+			left: 81px;
+			opacity: 1;
+		}
+	}
 }
 
-/* ---------- ingredients dropdown ---------- */
 .ingredients__dropdown {
 	display: block;
 	position: absolute;
-	//left: -9999px;
-	left: 94px;
+	left: -9999px;
 	top: -69px;
 	min-width: 380px;
 	min-height: 245px;
 	box-sizing: border-box;
-	padding: 24px 30px;
+	padding: 22px 30px;
 	@include border-radius(20px);
 	background: rgba(#fff, 0.92);
 	z-index: 1;
-	//opacity: 0;
+	opacity: 0;
 	@include transition(opacity .3s);
 	&:before {
-
-
-
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -60px;
+		width: 60px;
 	}
 }
 
@@ -259,6 +265,13 @@
 .ingredient__pic {
 	@include inline-block(middle);
 	width: 26px;
+	overflow: hidden;
+}
+
+.ingredient__pic_img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 .ingredient__name {
@@ -267,7 +280,6 @@
 	min-width: 195px;
 	font: 16px/40px 'HelveticaRegular';
 	color: #575757;
-	//text-align: left;
 }
 
 .ingredient__value {
@@ -275,11 +287,21 @@
 	padding-left: 12px;
 	font: 16px/40px 'HelveticaRegular';
 	color: #575757;
-	//text-align: left;
 }
 
-
-
+.ingredients__triangle {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-right: 13px solid rgba(#fff, 0.92);
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	top: 3px;
+	left: -9999px;
+	z-index: 1;
+	opacity: 0;
+	@include transition(opacity .3s);
+}
 
 .ingredients__text {
 	font: 15px 'ArialRegular';
@@ -308,6 +330,7 @@
 	color: #fff;
 }
 
+/* ---------- hipsweet picture ---------- */
 .hipsweet__pic{
 	position: relative;
 	float: left;
@@ -333,6 +356,7 @@
 	height: 64px;
 }
 
+/* ---------- hipsweet information ---------- */
 .hipsweet__info {
 	float: left;
 	margin-left: 73px;

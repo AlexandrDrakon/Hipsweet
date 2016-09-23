@@ -446,10 +446,6 @@ a {
   background-image: radial-gradient(circle farthest-corner at 20% 80%, #e44347 0%, #bc262c 50%, #ab282e 100%);
   background-image: -ms-radial-gradient(20% 80%, circle farthest-corner, #e44347 0%, #bc262c 50%, #ab282e 100%); }
 
-/* IE8- CSS hack */
-@media \0screen\,screen\9 {
-  .header__bg {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe44347",endColorstr="#ffab282e",GradientType=0); } }
 .header {
   padding-top: 25px;
   padding-bottom: 60px; }
@@ -524,10 +520,10 @@ a {
   .team:hover .angle-down-up:after {
     content: '\f106'; }
   .team:hover .team__dropdown {
-    left: -75px;
+    left: -74px;
     opacity: 1; }
   .team:hover .team__triangle {
-    left: 19px;
+    left: 20px;
     opacity: 1; }
 
 .team__dropdown {
@@ -635,6 +631,7 @@ a {
   margin-bottom: 21px;
   text-align: center; }
 
+/* ---------- ingredients dropdown ---------- */
 .ingredients__img {
   position: relative;
   width: 42px;
@@ -643,28 +640,49 @@ a {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: url("../img/icons/mixer.png") center no-repeat, rgba(255, 255, 255, 0.1); }
+  background: url("../img/icons/mixer.png") center no-repeat, rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+  .ingredients__img:hover {
+    background-color: rgba(255, 175, 40, 0.92); }
+    .ingredients__img:hover .ingredients__dropdown {
+      left: 94px;
+      opacity: 1; }
+    .ingredients__img:hover .ingredients__triangle {
+      left: 81px;
+      opacity: 1; }
 
-/* ---------- ingredients dropdown ---------- */
 .ingredients__dropdown {
   display: block;
   position: absolute;
-  left: 94px;
+  left: -9999px;
   top: -69px;
   min-width: 380px;
   min-height: 245px;
   box-sizing: border-box;
-  padding: 24px 30px;
+  padding: 22px 30px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.92);
   z-index: 1;
+  opacity: 0;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
   -ms-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s; }
+  .ingredients__dropdown:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -60px;
+    width: 60px; }
 
 .ingredients__item {
   text-align: left;
@@ -673,7 +691,13 @@ a {
 .ingredient__pic {
   display: inline-block;
   vertical-align: middle;
-  width: 26px; }
+  width: 26px;
+  overflow: hidden; }
+
+.ingredient__pic_img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; }
 
 .ingredient__name {
   display: inline-block;
@@ -689,6 +713,23 @@ a {
   padding-left: 12px;
   font: 16px/40px 'HelveticaRegular';
   color: #575757; }
+
+.ingredients__triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 13px solid rgba(255, 255, 255, 0.92);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  top: 3px;
+  left: -9999px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
 
 .ingredients__text {
   font: 15px 'ArialRegular';
@@ -712,6 +753,7 @@ a {
   font: 24px/24px 'MalinaRegular';
   color: #fff; }
 
+/* ---------- hipsweet picture ---------- */
 .hipsweet__pic {
   position: relative;
   float: left;
@@ -734,6 +776,7 @@ a {
   width: 458px;
   height: 64px; }
 
+/* ---------- hipsweet information ---------- */
 .hipsweet__info {
   float: left;
   margin-left: 73px;
