@@ -1,10 +1,6 @@
 .header__bg {
 	background-color: #c22e33;
-	/* IE9, iOS 3.2+ */
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIyMCUiIGN5PSI4MCUiIHI9IjExMy4xMzcwODQ5ODk4NDc2MSUiPjxzdG9wIHN0b3AtY29sb3I9IiNlNDQzNDciIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2JjMjYyYyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhYjI4MmUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
-	/* Android 2.3- hack (needed for the actual radial gradient) */
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIyMCUiIGN5PSI4MCUiIHI9IjExMy4xMzcwODQ5ODk4NDc2MSUiPjxzdG9wIHN0b3AtY29sb3I9IiNlNDQzNDciIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2JjMjYyYyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhYjI4MmUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+),
-	-webkit-gradient(radial, 20% 80%, 0, 20% 80%, 2268,color-stop(0, rgb(228, 67, 71)),color-stop(0.5, rgb(188, 38, 44)),color-stop(1, rgb(171, 40, 46)));
+	background-image: -webkit-gradient(radial, 20% 80%, 0, 20% 80%, 2268,color-stop(0, rgb(228, 67, 71)),color-stop(0.5, rgb(188, 38, 44)),color-stop(1, rgb(171, 40, 46)));
 	/* Android 2.3 */
 	background-image: -webkit-radial-gradient(20% 80%, circle farthest-corner,rgb(228, 67, 71) 0%,rgb(188, 38, 44) 50%,rgb(171, 40, 46) 100%);
 	/* IE10+ */
