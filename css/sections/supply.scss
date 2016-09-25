@@ -1,0 +1,34 @@
+.supply__bg {
+	background-color: rgba(255, 178, 19, 0.9);
+	background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 914,color-stop(0, rgba(255, 171, 38, 0.9)),color-stop(1, rgba(255, 185, 0, 0.9))), url('../img/supply__bg.png');
+	/* Android 2.3 */
+	background-image: -webkit-radial-gradient(left bottom, circle farthest-corner,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply__bg.png');
+	/* IE10+ */
+	background-image: radial-gradient(circle farthest-corner at left bottom,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply__bg.png');
+	background-image: -ms-radial-gradient(left bottom, circle farthest-corner,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply__bg.png');
+}
+
+.supply {
+	//min-height: 1130px;
+	padding-top: 103px;
+	padding-bottom: 87px;
+}
+
+.supply__title {
+	font: 62px/62px 'MalinaRegular';
+	color: #393939;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.supply__desc {
+	width: 780px;
+	margin: 0 auto;
+	font: 16px/22px 'MyriadProRegular';
+	color: #883313;
+	text-align: center;
+	a {
+		color: #393939;
+		text-decoration: underline;
+	}
+}
