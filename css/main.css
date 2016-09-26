@@ -897,7 +897,8 @@ a {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 .reason__title {
   font: 16px/18px 'MalinaRegular';
@@ -927,7 +928,7 @@ a {
 
 .supply {
   padding-top: 103px;
-  padding-bottom: 87px; }
+  padding-bottom: 79px; }
 
 .supply__title {
   font: 62px/62px 'MalinaRegular';
@@ -940,9 +941,50 @@ a {
   margin: 0 auto;
   font: 16px/22px 'MyriadProRegular';
   color: #883313;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 21px; }
   .supply__desc a {
     color: #393939;
     text-decoration: underline; }
+
+.supply__catalog {
+  font-size: 0; }
+
+.catalog__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 274px;
+  margin-bottom: 7px; }
+
+.catalog__pic {
+  height: 241px;
+  padding-left: 51px;
+  overflow: hidden;
+  margin-bottom: 7px; }
+  .catalog__pic:after {
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0;
+    height: 100%; }
+
+.catalog__pic_img {
+  display: inline-block;
+  vertical-align: bottom;
+  max-width: 100%;
+  max-height: 100%; }
+
+.catalog__title {
+  padding: 0 25px;
+  font: 32px/56px 'MalinaRegular';
+  color: #393939;
+  text-align: center;
+  margin-bottom: 2px; }
+
+.catalog__desc {
+  padding: 0 25px;
+  font: 14px/18px 'MyriadProRegular';
+  color: #ab594a;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
