@@ -1,0 +1,65 @@
+.ourteam__bg {
+	background-color: #e2e2e2;
+	background-image: -webkit-gradient(radial, center center, 0, center center, 1253,color-stop(0, rgb(252, 252, 252)),color-stop(1, rgb(200, 200, 200)));
+	/* Android 2.3 */
+	background-image: -webkit-radial-gradient(center center, circle farthest-corner,rgb(252, 252, 252) 0%,rgb(200, 200, 200) 100%);
+	/* IE10+ */
+	background-image: radial-gradient(circle farthest-corner at center center,rgb(252, 252, 252) 0%,rgb(200, 200, 200) 100%);
+	background-image: -ms-radial-gradient(center center, circle farthest-corner,rgb(252, 252, 252) 0%,rgb(200, 200, 200) 100%);
+}
+
+.ourteam {
+	padding-top: 80px;
+	padding-bottom: 82px;
+}
+
+.ourteam__top {
+	@extend %clearfix;
+	margin-bottom: 47px;
+}
+
+.ourteam__title {
+	float: left;
+	width: 382px;
+	font:	62px/74px 'MalinaRegular';
+	color: #2b2f60;
+}
+
+.ourteam__cooks {
+	float: left;
+	padding-top: 3px;
+	font-size: 0;
+}
+
+.cook__item {
+	@include inline-block(top);
+	width: 229px;
+	min-height: 144px;
+	padding: 16px 28px;
+	box-sizing: border-box;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.cook__item_active, .cook__item:hover {
+	background: #893213;
+	@include border-radius(20px);
+	.cook__name {
+		color: #ffa92b;
+	}
+	.cook__spec {
+		color: #ffffff;
+	}
+}
+
+.cook__name {
+	font: 30px/36px 'MalinaRegular';
+	color: #2b2f60;
+	margin-bottom: 2px;
+}
+
+.cook__spec {
+	font: 16px/30px 'ArialRegular';
+	color: #8d8d8d;
+	letter-spacing: 0.9px;
+}
