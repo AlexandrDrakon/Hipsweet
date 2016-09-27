@@ -14,6 +14,16 @@
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: 'ArialItalic';
+  src: url("../fonts/arialitalic-webfont.woff") format("woff"), url("../fonts/arialitalic-webfont.svg#arialitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ArialBoldItalic';
+  src: url("../fonts/arialbolditalic-webfont.woff") format("woff"), url("../fonts/arialbolditalic-webfont.svg#arialbold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: 'HelveticaRegular';
   src: url("../fonts/helveticaregular-webfont.woff") format("woff"), url("../fonts/helveticaregular-webfont.svg#helveticaregular") format("svg");
   font-weight: normal;
@@ -28,7 +38,7 @@
   src: url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.header__top:after, .header__middle:after, .taste:after, .ourteam__top:after {
+.header__top:after, .header__middle:after, .taste:after, .ourteam__top:after, .ourteam__content:after {
   content: '';
   display: block;
   clear: both; }
@@ -919,12 +929,12 @@ a {
 
 .supply__bg {
   background-color: rgba(255, 178, 19, 0.9);
-  background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 914, color-stop(0, rgba(255, 171, 38, 0.9)), color-stop(1, rgba(255, 185, 0, 0.9))), url("../img/supply__bg.png");
+  background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 914, color-stop(0, rgba(255, 171, 38, 0.9)), color-stop(1, rgba(255, 185, 0, 0.9))), url("../img/supply-bg.png");
   /* Android 2.3 */
-  background-image: -webkit-radial-gradient(left bottom, circle farthest-corner, rgba(255, 171, 38, 0.9) 0%, rgba(255, 185, 0, 0.9) 100%), url("../img/supply__bg.png");
+  background-image: -webkit-radial-gradient(left bottom, circle farthest-corner, rgba(255, 171, 38, 0.9) 0%, rgba(255, 185, 0, 0.9) 100%), url("../img/supply-bg.png");
   /* IE10+ */
-  background-image: radial-gradient(circle farthest-corner at left bottom, rgba(255, 171, 38, 0.9) 0%, rgba(255, 185, 0, 0.9) 100%), url("../img/supply__bg.png");
-  background-image: -ms-radial-gradient(left bottom, circle farthest-corner, rgba(255, 171, 38, 0.9) 0%, rgba(255, 185, 0, 0.9) 100%), url("../img/supply__bg.png"); }
+  background-image: radial-gradient(circle farthest-corner at left bottom, rgba(255, 171, 38, 0.9) 0%, rgba(255, 185, 0, 0.9) 100%), url("../img/supply-bg.png");
+  background-image: -ms-radial-gradient(left bottom, circle farthest-corner, rgba(255, 171, 38, 0.9) 0%, rgba(255, 185, 0, 0.9) 100%), url("../img/supply-bg.png"); }
 
 .supply {
   padding-top: 103px;
@@ -996,6 +1006,7 @@ a {
   background-image: radial-gradient(circle farthest-corner at center center, #fcfcfc 0%, #c8c8c8 100%);
   background-image: -ms-radial-gradient(center center, circle farthest-corner, #fcfcfc 0%, #c8c8c8 100%); }
 
+/* ---------- OURTEAM TOP ---------- */
 .ourteam {
   padding-top: 80px;
   padding-bottom: 82px; }
@@ -1018,30 +1029,121 @@ a {
   display: inline-block;
   vertical-align: top;
   width: 229px;
+  margin-right: 10px; }
+  .cook__item:after {
+    content: '';
+    display: block;
+    margin-left: 102px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    -webkit-transition: border-top-color 0.3s;
+    -moz-transition: border-top-color 0.3s;
+    -ms-transition: border-top-color 0.3s;
+    -o-transition: border-top-color 0.3s;
+    transition: border-top-color 0.3s; }
+
+.cook__item_link {
+  display: block;
   min-height: 144px;
   padding: 16px 28px;
   box-sizing: border-box;
-  margin-right: 10px;
-  margin-bottom: 10px; }
-
-.cook__item_active, .cook__item:hover {
-  background: #893213;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px; }
-  .cook__item_active .cook__name, .cook__item:hover .cook__name {
-    color: #ffa92b; }
-  .cook__item_active .cook__spec, .cook__item:hover .cook__spec {
-    color: #ffffff; }
+  border-radius: 20px;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s; }
 
 .cook__name {
   font: 30px/36px 'MalinaRegular';
   color: #2b2f60;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s; }
 
 .cook__spec {
   font: 16px/30px 'ArialRegular';
   color: #8d8d8d;
-  letter-spacing: 0.9px; }
+  letter-spacing: 0.9px;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s; }
+
+.cook__item.active .cook__item_link, .cook__item:hover .cook__item_link {
+  background: #893213; }
+  .cook__item.active .cook__item_link .cook__name, .cook__item:hover .cook__item_link .cook__name {
+    color: #ffa92b; }
+  .cook__item.active .cook__item_link .cook__spec, .cook__item:hover .cook__item_link .cook__spec {
+    color: #ffffff; }
+.cook__item.active:after, .cook__item:hover:after {
+  border-top-color: #893213; }
+
+/* ---------- OURTEAM CONTENT ---------- */
+.cook__quote {
+  float: left;
+  width: 270px;
+  padding-top: 47px;
+  position: relative; }
+  .cook__quote:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 41px;
+    background: url("../img/ourteam-quote.png") no-repeat;
+    top: 0;
+    left: 100%;
+    margin-top: 26px;
+    margin-left: 80px;
+    z-index: 1; }
+
+.cook__quote-item {
+  display: none; }
+  .cook__quote-item p {
+    font: 14px/21px 'ArialItalic';
+    color: #747474;
+    margin-top: 0;
+    margin-bottom: 22px; }
+  .cook__quote-item p.quote__bold {
+    font: 14px/21px 'ArialBoldItalic';
+    color: #484848; }
+
+.cook__quote-item.active {
+  display: block; }
+
+.ourteam__pic {
+  float: left;
+  width: 470px; }
+
+.ourteam__pic_img {
+  max-width: 100%; }
+
+.cook__desc {
+  float: left;
+  width: 360px;
+  padding-top: 47px; }
+
+.cook__desc-item {
+  display: none;
+  padding-left: 20px;
+  padding-right: 5px; }
+  .cook__desc-item p {
+    font: 14px/21px 'ArialItalic';
+    color: #747474;
+    margin-top: 0;
+    margin-bottom: 21px; }
+
+.cook__desc-item.active {
+  display: block; }
 
 /*# sourceMappingURL=main.css.map */

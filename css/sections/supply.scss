@@ -1,11 +1,11 @@
 .supply__bg {
 	background-color: rgba(255, 178, 19, 0.9);
-	background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 914,color-stop(0, rgba(255, 171, 38, 0.9)),color-stop(1, rgba(255, 185, 0, 0.9))), url('../img/supply__bg.png');
+	background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 914,color-stop(0, rgba(255, 171, 38, 0.9)),color-stop(1, rgba(255, 185, 0, 0.9))), url('../img/supply-bg.png');
 	/* Android 2.3 */
-	background-image: -webkit-radial-gradient(left bottom, circle farthest-corner,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply__bg.png');
+	background-image: -webkit-radial-gradient(left bottom, circle farthest-corner,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply-bg.png');
 	/* IE10+ */
-	background-image: radial-gradient(circle farthest-corner at left bottom,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply__bg.png');
-	background-image: -ms-radial-gradient(left bottom, circle farthest-corner,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply__bg.png');
+	background-image: radial-gradient(circle farthest-corner at left bottom,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply-bg.png');
+	background-image: -ms-radial-gradient(left bottom, circle farthest-corner,rgba(255, 171, 38, 0.9) 0%,rgba(255, 185, 0, 0.9) 100%), url('../img/supply-bg.png');
 }
 
 .supply {

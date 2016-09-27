@@ -8,6 +8,7 @@
 	background-image: -ms-radial-gradient(center center, circle farthest-corner,rgb(252, 252, 252) 0%,rgb(200, 200, 200) 100%);
 }
 
+/* ---------- OURTEAM TOP ---------- */
 .ourteam {
 	padding-top: 80px;
 	padding-bottom: 82px;
@@ -34,32 +35,128 @@
 .cook__item {
 	@include inline-block(top);
 	width: 229px;
+	margin-right: 10px;
+	&:after {
+		content: '';
+		display: block;
+		margin-left: 102px;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-left: 17px solid transparent;
+		border-right: 17px solid transparent;
+		@include transition(border-top-color .3s);
+	}
+}
+
+.cook__item_link {
+	display: block;
 	min-height: 144px;
 	padding: 16px 28px;
 	box-sizing: border-box;
-	margin-right: 10px;
-	margin-bottom: 10px;
-}
-
-.cook__item_active, .cook__item:hover {
-	background: #893213;
 	@include border-radius(20px);
-	.cook__name {
-		color: #ffa92b;
-	}
-	.cook__spec {
-		color: #ffffff;
-	}
+	@include transition(background .3s);
 }
 
 .cook__name {
 	font: 30px/36px 'MalinaRegular';
 	color: #2b2f60;
 	margin-bottom: 2px;
+	@include transition(color .3s);
 }
 
 .cook__spec {
 	font: 16px/30px 'ArialRegular';
 	color: #8d8d8d;
 	letter-spacing: 0.9px;
+	@include transition(color .3s);
+}
+
+.cook__item.active, .cook__item:hover {
+	.cook__item_link {
+		background: #893213;
+		.cook__name {
+			color: #ffa92b;
+		}
+		.cook__spec {
+			color: #ffffff;
+		}
+	}
+	&:after {
+		border-top-color: #893213;
+	}
+}
+
+/* ---------- OURTEAM CONTENT ---------- */
+.ourteam__content {
+	@extend %clearfix;
+}
+
+.cook__quote {
+	float: left;
+	width: 270px;
+	padding-top: 47px;
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 41px;
+		background: url('../img/ourteam-quote.png') no-repeat;
+		top: 0;
+		left: 100%;
+		margin-top: 26px;
+		margin-left: 80px;
+		z-index: 1;
+	}
+}
+
+.cook__quote-item {
+	display: none;
+	p {
+		font: 14px/21px 'ArialItalic';
+		color: #747474;
+		margin-top: 0;
+		margin-bottom: 22px;
+	}
+	p.quote__bold {
+		font: 14px/21px 'ArialBoldItalic';
+		color: #484848;
+	}
+}
+
+.cook__quote-item.active {
+	display: block;
+}
+
+.ourteam__pic {
+	float: left;
+	width: 470px;
+}
+
+.ourteam__pic_img {
+	max-width: 100%;
+}
+
+.cook__desc {
+	float: left;
+	width: 360px;
+	padding-top: 47px;
+}
+
+.cook__desc-item {
+	display: none;
+	padding-left: 20px;
+	padding-right: 5px;
+	p {
+		font: 14px/21px 'ArialItalic';
+		color: #747474;
+		margin-top: 0;
+		margin-bottom: 21px;
+	}
+}
+
+.cook__desc-item.active {
+	display: block;
 }
