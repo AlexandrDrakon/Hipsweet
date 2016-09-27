@@ -1,6 +1,5 @@
 .header__bg {
 	background-color: #c22e33;
-	background-image: -webkit-gradient(radial, 20% 80%, 0, 20% 80%, 2268,color-stop(0, rgb(228, 67, 71)),color-stop(0.5, rgb(188, 38, 44)),color-stop(1, rgb(171, 40, 46)));
 	/* Android 2.3 */
 	background-image: -webkit-radial-gradient(20% 80%, circle farthest-corner,rgb(228, 67, 71) 0%,rgb(188, 38, 44) 50%,rgb(171, 40, 46) 100%);
 	/* IE10+ */

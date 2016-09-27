@@ -1,6 +1,5 @@
 .ourteam__bg {
 	background-color: #e2e2e2;
-	background-image: -webkit-gradient(radial, center center, 0, center center, 1253,color-stop(0, rgb(252, 252, 252)),color-stop(1, rgb(200, 200, 200)));
 	/* Android 2.3 */
 	background-image: -webkit-radial-gradient(center center, circle farthest-corner,rgb(252, 252, 252) 0%,rgb(200, 200, 200) 100%);
 	/* IE10+ */
@@ -136,6 +135,7 @@
 }
 
 .ourteam__pic_img {
+	display: block;
 	max-width: 100%;
 }
 
@@ -159,4 +159,123 @@
 
 .cook__desc-item.active {
 	display: block;
+}
+
+/* ---------- OURTEAM FORMA ---------- */
+.ourteam__forma {
+	position: relative;
+	margin: 0 141px 35px 116px;
+	width: 843px;
+}
+
+.forma__order {
+	width: 100%;
+	min-height: 408px;
+	@include border-radius(20px);
+	overflow: hidden;
+	background: #9d5125 url('../img/ourteam-forma-bg.png') center / contain no-repeat;
+	@extend %clearfix;
+}
+
+.order__title {
+	float: left;
+	width: 433px;
+	min-height: 408px;
+	padding: 115px 50px 50px 67px;
+	box-sizing: border-box;
+	font: 64px/77px 'MalinaRegular';
+	color: #ffffff;
+	letter-spacing: 6px;
+}
+
+.order__contacts {
+	float: left;
+	width: 410px;
+	padding: 63px 88px 69px 46px;
+	box-sizing: border-box;
+	min-height: 408px;
+	background-color: rgba(#414144, .84);
+	input {
+		display: block;
+		width: 277px;
+		height: 56px;
+		padding: 0 3px;
+		margin: 0 0 24px;
+		box-sizing: border-box;
+		background: none;
+		border: none;
+		border-bottom: 1px solid #ffffff;
+		font: 16px/21.67px 'ArialRegular';
+		color: #ffffff;
+		&::-moz-placeholder,&::-webkit-input-placeholder,&::-moz-placeholder,&:-ms-input-placeholder {
+			color: #ffffff;
+		}
+	}
+}
+
+.contacts__name {
+
+}
+
+.contacts__email {
+
+}
+
+.contacts__tel {
+	letter-spacing: 1.6px;
+}
+
+
+
+
+
+
+.forma__btn {
+	display: block;
+	position: absolute;
+	width: 96px;
+	height: 96px;
+	@include border-radius(50%);
+	background-color: #ffb100;
+	top: 100%;
+	left: 100%;
+	margin-top: -61px;
+	margin-left: -61px;
+	z-index: 1;
+	@include transition(background-color .3s);
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 22px;
+		height: 30px;
+		background-color: #9d5125;
+		top: 35px;
+		left: 29px;
+		z-index: 2;
+		@include transition(background-color .3s);
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 27px solid #9d5125;
+		border-top: 25px solid transparent;
+		border-bottom: 25px solid transparent;
+		top: 25px;
+		left: 51px;
+		z-index: 2;
+		@include transition(border-left-color .3s);
+	}
+	&:hover {
+		background-color: #641a00;
+		&:before {
+			background-color: #ffae28;
+		}
+		&:after {
+			border-left-color: #ffae28;
+		}
+	}
 }
